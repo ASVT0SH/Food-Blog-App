@@ -1,0 +1,26 @@
+
+{% extends 'food/base.html' %}
+{% block body %}
+<center>
+<h1><u>Profile</u></h1>
+<div class="profile-image">
+    <img src ="{{user.profile.image.url}}" height="200px" width="200px">
+</div>
+<div class="user-name">
+    Username: {{ user.username }}
+</div>
+<div class="email">
+    Email: {{user.email  }}
+</div>
+
+{% if user.first_name != "" %}
+<div class="uname">
+    First Name: {{user.first_name}} <br>
+    Last Name: {{user.last_name}}
+</div>
+{% endif %}
+
+</center>
+{% endblock %}
+
+
